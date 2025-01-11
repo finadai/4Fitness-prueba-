@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>4Fitness</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="icon" href="/public/4fitness.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
+<header>
+    <img id="logo" src="../assets/images/4fitness.png" alt="4Fitness logo">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div id="menu" class="menu hidden">
+      <div class="menu-item">
+        <a href="../src/pages/myroutine.html">Mi Rutina</a>
+      </div>
+      <div class="menu-item">
+        <a href="acerca-de.html">Acerca De</a>
+      </div>
+      <div class="menu-item">
+        <a href="../src/pages/routinehistory.html">Historial de Rutinas</a>
+      </div>
+    </div>
+    <a href="/public/index.html" class="btn-volver">Volver</a>  
+    <hr class="bar">
+</header>
 <body>
-    
+    <div class="historial">
+        <h1>Historial de rutinas</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Fechas</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>1 de diciembre de 2024 - 14 de diciembre de 2024</td>
+              <td><button class="ver-btn">Ver</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>15 de diciembre de 2024 - 28 de diciembre de 2024</td>
+              <td><button class="ver-btn">Ver</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>29 de diciembre de 2024 - 11 de enero de 2025</td>
+              <td><button class="ver-btn">Ver</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>12 de enero de 2025 - 25 de enero de 2025</td>
+              <td><button class="ver-btn">Ver</button></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>26 de enero de 2025 - 8 de febrero de 2025</td>
+              <td><button class="ver-btn">Ver</button></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>9 de febrero de 2025 - 22 de febrero de 2025</td>
+              <td><button class="ver-btn">Ver</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+    <script src="../app.js"></script>
 </body>
+    <footer>
+        <img id="banner" src="../assets/images/vintage-sports_Mockup2.jpg" alt="banner-footer">
+    </footer>
 </html>

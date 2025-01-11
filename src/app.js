@@ -10,21 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
         btnRegistrar.addEventListener('click',  () =>   {
             window.location.href='../src/pages/register.html';
     });
-
-    const btnRegresar   =   document.getElementById('btn-regresar');
-        btnRegresar.addEventListener('click',   () =>{
-            window.history.back();
-        });
 });
 
-/*Menú de hamburguesa (aún en desarrollo)*/
-const menuToggle    =   document.getElementById('menu-toggle');
-const menu  =   document.getElementById('menu');
 
-menuToggle.addEventListener('click', () =>{
-    menu.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-});
+/*Menú hamburguesa*/
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const body = document.body;
+  
+   
+    menu.classList.toggle("hidden");
+  
+    if (!menu.classList.contains("hidden")) {
+      body.classList.add("no-scroll");
+    } else {
+      body.classList.remove("no-scroll");
+    }
+  }
+  
+  function closeMenu() {
+    const menu = document.getElementById("menu");
+    const body = document.body;
+  
+    
+    if (!menu.classList.contains("hidden")) {
+      menu.classList.add("hidden");
+      body.classList.remove("no-scroll");
+    }
+  }
+  
+  document.addEventListener("click", (event) => {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+  
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+      closeMenu();
+    }
+  });
+  
+  
+  
 
 /*Login (aún en desarrollo)*/
 const form = document.getElementById('login-form');
@@ -35,12 +60,16 @@ form.addEventListener('submit', (event) => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
-    
-    if (username === '' || password === '') {
+     if (username === '' || password === '') {
         alert('Por favor, completa todos los campos.');
     } else {
         
         alert('Iniciando sesión...');
         
-    }
+    };
+});
+
+const imagen    =   document.getElementById('logo');
+imagen.addEventListener('click',    ()  =>  {
+    window.location.href    =   '/public/index.html';
 });

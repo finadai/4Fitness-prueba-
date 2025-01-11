@@ -11,25 +11,18 @@
 
 <header>
     <img id="logo" src="../src/assets/images/4fitness.png" alt="4Fitness logo">
-    <div class="menu-container">
-      <button id="menu-toggle" class="menu-icon">
-        <span class="barra"></span>
-        <span class="barra"></span>
-        <span class="barra"></span>
-      </button>
-      <nav id="menu" class="menu">
-        <ul>
-          <li><a href="#home">Pendiente</a></li>
-          <li><a href="#services">Pendiente</a></li>
-          <li><a href="#about">Pendiente</a></li>
-          <li><a href="#contact">Pendiente</a></li>
-        </ul>
-      </nav> 
-    </div>   
-    
-    
-    
-    
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div id="menu" class="menu hidden">
+      <div class="menu-item">
+        <a href="../src/pages/myroutine.html">Mi Rutina</a>
+      </div>
+      <div class="menu-item">
+        <a href="acerca-de.html">Acerca De</a>
+      </div>
+      <div class="menu-item">
+        <a href="../src/pages/routinehistory.html">Historial de Rutinas</a>
+      </div>
+    </div>
     
     <div class="buttons-container">
         <button  id="btn-ingresar" class="ingreso" data-section="ingresar">Ingreso</button>

@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>4Fitness</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="icon" href="/public/4fitness.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<header>
+        <img id="logo" src="../assets/images/4fitness.png" alt="4Fitness logo">
+        <a href="/public/index.html" class="btn-volver">Volver</a>  
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div id="menu" class="menu hidden">
+      <div class="menu-item">
+        <a href="../src/pages/myroutine.html">Mi Rutina</a>
+      </div>
+      <div class="menu-item">
+        <a href="acerca-de.html">Acerca De</a>
+      </div>
+      <div class="menu-item">
+        <a href="../src/pages/routinehistory.html">Historial de Rutinas</a>
+      </div>
+    </div>
+        <hr class="bar">
+</header>
 <body>
-    
+    <div id="container">
+        <h1>Mi rutina</h1>
+        <form>
+            <div class="row">
+                <label for="ejercicio">Ejercicio</label>
+                <select id="ejercicio">
+                    <option value="" disabled selected>Ejercicios disponibles</option>
+                    <option value="">Opcion</option>
+                    <option value="">Opcion</option>
+                    <option value="">Opcion</option>
+                    <option value="">Opcion</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="variacion">Variación</label>
+                <select id="variacion">
+                    <option value="" disabled selected>Variaciones</option>
+                    <option value="">Opcion</option>
+                    <option value="">Opcion</option>
+                    <option value="">Opcion</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="peso">Peso</label>
+                <input type="number" id="peso" placeholder="Peso" min="1" max="200">
+            </div>
+            <div class="row">
+                <label for="metodo">Método</label>
+                <select id="metodo">
+                    <option value="" disabled selected>Métodos</option>
+                    <option value="">Opcion</option>
+                    <option value="">Opcion</option>
+                    <option value="">Opcion</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="series">Series</label>
+                <input type="number" id="series" placeholder="número de series">
+            </div>
+            <div class="row">
+                <label for="rep-tiempo">Rep/Time</label>
+                <input type="number" id="rep-tiempo" placeholder="repeticiones/tiempo">
+            </div>
+
+<button id="btn-videos">Ver videos</button>
+<hr>
+<script src="../app.js"></script>
 </body>
+<footer>
+    <img id="banner" src="../assets/images/vintage-sports_Mockup2.jpg" alt="banner-footer">
+</footer>
 </html>
